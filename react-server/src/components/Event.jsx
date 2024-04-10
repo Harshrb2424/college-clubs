@@ -5,9 +5,10 @@ function EventComponent() {
   const data = useParams();
     console.log(data);
   return (
-    <div>
+    <main id='event'>
       <h1>{data.clubName}</h1>
-    </div>
+      <h1>{data.eventName}</h1>
+    </main>
   );
 }
 
