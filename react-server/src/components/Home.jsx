@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import Loading from './pages/Loading';
 
 function HomePage() {
+
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -10,9 +12,7 @@ function HomePage() {
   }, []);
 
   return loading ? (
-    <div className="loading-screen">
-      <h2>Loading...</h2>
-    </div>
+    <Loading />
   ) : (
     <main id='home'>
       <h1>Welcome to College Clubs!</h1>

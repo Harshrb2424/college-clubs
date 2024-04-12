@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Rubik&display=swap");
+/* font-family: 'Poppins', sans-serif;
+font-family: 'Rubik', sans-serif; */
+:root {
+  --background-color: #f0ece5;
+  --accent-color: #b6bbc4;
+  --accent-light-color: rgb(184, 184, 255);
+  --secondary-color: #31304d;
+  --primary-color: #161a30;
+  --nav-c1: rgba(255, 255, 255, 0);
+  --nav-c2: rgba(255, 255, 255, 0.85);
+
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  height: 100vh;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p, li {
+  color: var(--primary-color);
+  font-family: "Rubik", sans-serif;
+  font-weight: 100;
+  margin: 0;
+}
+nav {
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  width: 96%;
+  align-items: center;
+  padding: 1% 2%;
+  padding-bottom: 30px;
+  background: linear-gradient(
+    0deg,
+    var(--nav-c1) 0%,
+    var(--nav-c2) 20%
+  );
+}
+nav .nav img{
+  border-radius: 50%;
+}
+nav > div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+nav > div > img {
+  letter-spacing: 1px;
+  transform: scale(0.9);
+  transition: all ease 500ms;
+}
+nav:hover > div > img {
+  transform: scale(1);
+}
+nav h3 {
+  text-shadow: 1px 1px 3px var(--nav-c2);
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  padding: 0 10px;
+  transition: all ease 200ms;
+}
+nav h3:hover {
+  transform: scale(1.2);
+}
+nav .logo {
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 5px var(--nav-c2);
+}
+nav:hover > .logo {
+  transform: scale(1.05);
+  transition: all ease 500ms;
+}
+
+nav img {
+  height: 50px;
+}
+#home {
+  height: 80vh;
+  width: auto;
+  padding: 0 2%;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home > h1 {
+  padding: 0 10%;
+  text-shadow: 1px 1px 3px var(--nav-c2);
+  transform: scale(0.9);
+  opacity: 0.8;
+  transition: all ease-out 300ms;
+}
+#home > h4 {
+  text-shadow: 1px 1px 3px var(--nav-c2);
+  opacity: 0.7;
+  transition: all ease-out 300ms;
+}
+#home:hover > h1 {
+  transform: scale(1);
+  opacity: 1;
+}
+#home:hover > h1,
+#home:hover > h4 {
+  transform: scale(1);
+  opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    padding-bottom: 10px; /* Set padding bottom to 0px for mobile devices */
+  }
+  nav h2 {
+    display: none; /* Hide h2 elements within nav */
+  } 
+  .nav{gap: 0px;}
+  nav h3 {
+    font-size: 12px; /* Set font size to 12px for h3 elements within nav for mobile devices */
+    padding: 0 7px;
+  }
+}
