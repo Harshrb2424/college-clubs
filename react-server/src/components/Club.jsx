@@ -3,10 +3,24 @@ import { useParams } from 'react-router-dom';
 import Loading from './pages/Loading';
 import Nav from './pages/Nav';
 import Home from './pages/Home';
+import Error from './pages/Error';
 
-function EventComponent() {
+let info = {
+  plexus: {title: "Where Minds Connect, Ideas Ignite, and Boundaries Fade Away",
+subTitle: "Plexus Club, MRCE"},
+  nss: {title: "NSS",
+  subTitle: "NSS, MRCE"},
+  innovista: {title: "Innovista",
+  subTitle: "Innovista, MRCE"},
+}
+
+function validClub(name) {
+  const clubs = ["nss", "plexus", "innovista"];
+    return clubs.includes(name);
+}
+
+function Club(p) {
   const data = useParams();
-  console.log(data);
   let root = document.documentElement;
 
   if (data.clubName === "plexus") {
@@ -18,10 +32,7 @@ function EventComponent() {
     root.style.setProperty('--nav-c1',"rgba(0, 0, 0, 0)");
     root.style.setProperty('--nav-c2',"rgba(0, 0, 0, 0.35)");
   }
-
-
-
-
+  
     const [loading, setLoading] = useState(true);
     useEffect(() => {
       const timeout = setTimeout(() => {
@@ -34,11 +45,16 @@ function EventComponent() {
   return loading ? (
     <Loading clubName={data.clubName} />
   ) : (
+     validClub(data.clubName) ?
     <main id='club'>
-      <Nav />
-      <Home />
+      <Nav logo={p.logo} club={true} validClub={validClub} event={true} />
+      <Home info={info[data.clubName]} />
+    </main> : 
+    <main id='club'>
+    <Nav logo={p.logo} validClub={validClub} home={true} />
+    <Error />
     </main>
   );
 }
 
-export default EventComponent;
+export default Club;
