@@ -38,12 +38,16 @@ function logo(club) {
   }
 }
 
+function validClub(name) {
+  const clubs = ["nss", "plexus", "innovista"];
+  return clubs.includes(name);
+}
 function App() {
   return (
     <Router>
       <Routes>
       <Route path="/:clubName" element={<ClubsPage logo={logo} />} />
-      <Route path="/:clubName/:eventName" element={<EventPage logo={logo} />} />
+      <Route path="/:clubName/:eventName" element={<EventPage logo={logo} validClub={validClub} verifyEvent={() => true} />} />
       <Route path="/" element={<HomePage logo={logo} />} />
       </Routes>
     </Router>
