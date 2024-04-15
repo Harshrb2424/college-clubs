@@ -1,6 +1,6 @@
 import React from 'react';
-
-function HomePage() {
+function HomePage({ getCollegeDetails }) {
+  console.log(getCollegeDetails());
   return (
     <div>
       <h1>Welcome to College Clubs!</h1>
