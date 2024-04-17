@@ -1,13 +1,13 @@
 const collegeDetails = {
-  logo: "mrce.png",
   name: "MRCE",
   title: "Knowledge is Devine",
   subTitle: "MRCE",
+  logo: "/resources/mrce.png",
   navigation: [
-    { name: "About Us", url: "/about-us" },
-    { name: "Login", url: "/login" },
+    { name: "About Us", url: "aboutUs" },
+    { name: "Login", url: "login" },
   ],
-  List: [
+  list: [
     { name: "Club 1", url: "/plexus", image: "plexus.jpg" },
     { name: "Club2", url: "/nss", image: "nss.jpg" },
     { name: "Club3", url: "/innovesta", image: "innovesta.jpg" },
@@ -57,19 +57,81 @@ const collegeDetails = {
     },
   ],
 };
+
 const clubs = [
   {
     name: "NSS",
     title: "Ministry of Youth Addairs and Sports",
     subTitle: "NSS",
-    logo: "nss.png",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/National_Service_Scheme_Logo.svg/1200px-National_Service_Scheme_Logo.svg.png",
     search: "nss",
     navigation: [
-      { name: "Home", url: "/" },
-      { name: "Events", url: "/nss" },
-      { name: "Login", url: "/login" },
+      { name: "Home", url: "home" },
+      { name: "Events", url: "events" },
+      { name: "Login", url: "login" },
     ],
     List: [
+      { name: "Event 1", url: "/Event1", image: "Event1.jpg" },
+      { name: "Event 2", url: "/Event2", image: "Event2.jpg" },
+      { name: "Event 3", url: "/Event3", image: "Event3.jpg" },
+    ],
+    members: [
+      {
+        title: "Department of Association",
+        list: [
+          {
+            name: "Venkatesh",
+            description: [
+              "Lorem ipsum dolor sit amet",
+              "Consectetur adipiscing elit",
+            ],
+            imgUrl: "venkatesh.jpg",
+          },
+          {
+            name: "Priyanka",
+            description: [
+              "Pellentesque habitant morbi tristique senectus",
+              "Et netus et malesuada fames",
+            ],
+            imgUrl: "priyanka.jpg",
+          },
+        ],
+      },
+      {
+        title: "Secretaries",
+        list: [
+          {
+            name: "B Akhilesh",
+            description: [
+              "Duis aute irure dolor in reprehenderit",
+              "In voluptate velit esse cillum",
+            ],
+            imgUrl: "b_akhilesh.jpg",
+          },
+          {
+            name: "M Hyndhavi",
+            description: [
+              "Eu fugiat nulla pariatur",
+              "Excepteur sint occaecat cupidatat non proident",
+            ],
+            imgUrl: "m_hyndhavi.jpg",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Plexus",
+    title: "Where Minds Connect, Ideas Ignite, and Boundaries Fade Away",
+    subTitle: "Plexus Club, MRCE",
+    logo: "/resources/plexus.svg",
+    search: "plexus",
+    navigation: [
+      { name: "Home", url: "home" },
+      { name: "Events", url: "events" },
+      { name: "Login", url: "login" },
+    ],
+    list: [
       { name: "Event 1", url: "/Event1", image: "Event1.jpg" },
       { name: "Event 2", url: "/Event2", image: "Event2.jpg" },
       { name: "Event 3", url: "/Event3", image: "Event3.jpg" },
@@ -129,10 +191,11 @@ const events = [
     logo: "hackathon_logo.png",
     search: "hackathon",
     navigation: [
-      { name: "About", url: "/about" },
-      { name: "Register", url: "/register" },
+      { name: "About", url: "about" },
+      { name: "Register", url: "register" },
+      { name: "Login", url: "login" },
     ],
-    List: [
+    list: [
       { name: "Welcome Message", url: "/welcome", image: "welcome_banner.jpg" },
       { name: "Schedule", url: "/schedule", image: "schedule_banner.jpg" },
       { name: "Prizes", url: "/prizes", image: "prizes_banner.jpg" },

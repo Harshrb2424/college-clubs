@@ -1,9 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ClubsPage from './components/ClubsPage';
-import HomePage from './components/HomePage';
-import EventPage from './components/EventPage';
+import ClubsPage from './pages/ClubsPage';
+import HomePage from './pages/HomePage';
+import EventPage from './pages/EventPage';
 import { getCollegeDetails, getClubByName, getEventByName } from './api/localDB';
+import "./styles/styles.css";
+import "./styles/nav.css";
 
 function App() {
   return (
