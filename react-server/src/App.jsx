@@ -6,6 +6,7 @@ import EventPage from './pages/EventPage';
 import { getCollegeDetails, getClubByName, getEventByName } from './api/localDB';
 import "./styles/styles.css";
 import "./styles/nav.css";
+import "./styles/background.css";
 
 function App() {
   return (

@@ -1,0 +1,12 @@
+.bg{
+    position: absolute;
+    top: 0;
+    z-index: -10; 
+    width: 100%; /* Set the width of the container */
+    height: 100vh; /* Set the height of the container to fill the viewport */
+    overflow: hidden; /* Hide any overflow */
+}
+.bg svg{
+    min-height: 100%;
+    min-width: 100%;
+}
