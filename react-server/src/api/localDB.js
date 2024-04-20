@@ -1,4 +1,5 @@
 const collegeDetails = {
+  colors: ["#002e76","#ff5202","#333333","#ffffff","rgba(0, 0, 0, 0.3)"],
   name: "MRCE",
   title: "Knowledge is Devine",
   subTitle: "MRCE",
@@ -60,6 +61,7 @@ const collegeDetails = {
 
 const clubs = [
   {
+    colors: ["#002e76","#ff5202","#333333","#ffffff","rgba(0, 0, 0, 0.3)"],
     name: "NSS",
     title: "Ministry of Youth Addairs and Sports",
     subTitle: "NSS",
@@ -121,6 +123,7 @@ const clubs = [
     ],
   },
   {
+    colors: ["#002e76","red","#ffffff","#333333","rgba(255, 255, 255, 0.3)"],
     name: "Plexus",
     title: "Where Minds Connect, Ideas Ignite, and Boundaries Fade Away",
     subTitle: "Plexus Club, MRCE",
@@ -185,6 +188,7 @@ const clubs = [
 
 const events = [
   {
+    colors: ["#ff2a6d","#005678","#333333","#f0ece5","rgba(0, 0, 0, 0.3)"],
     name: "Hackathon 2024",
     title: "",
     subTitle: "",

@@ -3,9 +3,9 @@
 :root {
     --primary-color: #002e76;
     --secondary-color: #ff5202; 
+    --text-color: #333333;
     --background-color: #ffffff;
     --nav-color: rgba(0, 0, 0, 0.3);
-    --text-color: #333333;
   }
 
   body {

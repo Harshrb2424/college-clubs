@@ -778,18 +778,14 @@ function svg(id) {
 
 
 function BG({ backgroundID }) {
+
     const [visible, setVisible] = useState(false);
-    
     useEffect(() => {
-        // Set the state to true after a short delay
         const timer = setTimeout(() => {
             setVisible(true);
-        }, 1000);
-        // Cleanup timer when component unmounts
+        }, 500);
         return () => clearTimeout(timer);
     }, []);
-    
-    // Class names: "bg" is always there, "visible" class is added if the state is true
     const bgClass = `bg${visible ? ' visible' : ''}`;
     
     return (

@@ -4,18 +4,22 @@ import Nav from "./components/Nav";
 import Background from "./components/Background";
 
 function EventPage({ getEventByName, getClubByName }) {
-  let root = document.documentElement;
-  root.style.setProperty("--primary-color", "#ff2a6d");
-  root.style.setProperty("--secondary-color", "#005678");
-  root.style.setProperty("--background-color", "#f0ece5");
-  root.style.setProperty("--nav-color", "rgba(0, 0, 0, 0.3)");
-  root.style.setProperty("--text-color", "#E5E5E5");
+
   const data = useParams();
+  const {colors, navigation } = getEventByName(data.eventName);
   const { logo, name } = getClubByName(data.clubName);
-  const { navigation } = getEventByName(data.eventName);
+
+  let root = document.documentElement;
+  root.style.setProperty("--primary-color", colors[0]);
+  root.style.setProperty("--secondary-color", colors[1]);
+  root.style.setProperty("--text-color", colors[2]);
+  root.style.setProperty("--background-color", colors[3]);
+  root.style.setProperty("--nav-color", colors[4]);
+
   console.log(data);
   console.log(getClubByName(data.clubName));
   console.log(getEventByName(data.eventName));
+  
   return (
     <div>
       <Nav navigation={navigation} logo={logo} name={name} />

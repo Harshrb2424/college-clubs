@@ -4,16 +4,20 @@ import Nav from "./components/Nav";
 import Background from "./components/Background";
 
 function ClubPage({ getClubByName }) {
-  let root = document.documentElement;
-  root.style.setProperty("--primary-color", "#002e76");
-  root.style.setProperty("--secondary-color", "red");
-  root.style.setProperty("--background-color", "#33333");
-  root.style.setProperty("--nav-color", "rgba(0, 0, 0, 0.3)");
-  root.style.setProperty("--text-color", "#333333");
+
   const data = useParams();
-  const { navigation, logo, name } = getClubByName(data.clubName);
+  const { colors, navigation, logo, name } = getClubByName(data.clubName);
+
+  let root = document.documentElement;
+  root.style.setProperty("--primary-color", colors[0]);
+  root.style.setProperty("--secondary-color", colors[1]);
+  root.style.setProperty("--text-color", colors[2]);
+  root.style.setProperty("--background-color", colors[3]);
+  root.style.setProperty("--nav-color", colors[4]);
+
   console.log(data);
   console.log(getClubByName(data.clubName));
+  
   return (
     <div>
       <Nav navigation={navigation} logo={logo} name={name} />

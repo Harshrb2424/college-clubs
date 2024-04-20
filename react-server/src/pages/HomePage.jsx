@@ -3,14 +3,18 @@ import Nav from "./components/Nav";
 import Background from "./components/Background";
 
 function HomePage({ getCollegeDetails }) {
+
+  const { colors, navigation, logo, name } = getCollegeDetails();
+
   let root = document.documentElement;
-  root.style.setProperty("--primary-color", "#002e76");
-  root.style.setProperty("--secondary-color", "#ff5202");
-  root.style.setProperty("--background-color", "#ffffff");
-  root.style.setProperty("--nav-color", "rgba(0, 0, 0, 0.3)");
-  root.style.setProperty("--text-color", "#333333");
+  root.style.setProperty("--primary-color", colors[0]);
+  root.style.setProperty("--secondary-color", colors[1]);
+  root.style.setProperty("--text-color", colors[2]);
+  root.style.setProperty("--background-color", colors[3]);
+  root.style.setProperty("--nav-color", colors[4]);
+
   console.log(getCollegeDetails());
-  const { navigation, logo, name } = getCollegeDetails();
+  
   return (
     <div>
       <Nav navigation={navigation} logo={logo} name={name} />
