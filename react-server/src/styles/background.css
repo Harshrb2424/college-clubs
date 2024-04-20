@@ -5,6 +5,11 @@
     width: 100%; /* Set the width of the container */
     height: 100vh; /* Set the height of the container to fill the viewport */
     overflow: hidden; /* Hide any overflow */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.bg.visible{
+    opacity: 1;
 }
 .bg svg{
     min-height: 100%;

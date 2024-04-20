@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 
 function svg(id) {
     switch (id) {
@@ -777,13 +777,27 @@ function svg(id) {
 }
 
 
-function Nav({ backgroundID }) {
-  return (
-    <div className="bg">
-    {svg(backgroundID)}
-        {/* <img src={ backgroundURL }  alt="bg1" /> */}
-    </div>
-  );
+function BG({ backgroundID }) {
+    const [visible, setVisible] = useState(false);
+    
+    useEffect(() => {
+        // Set the state to true after a short delay
+        const timer = setTimeout(() => {
+            setVisible(true);
+        }, 1000);
+        // Cleanup timer when component unmounts
+        return () => clearTimeout(timer);
+    }, []);
+    
+    // Class names: "bg" is always there, "visible" class is added if the state is true
+    const bgClass = `bg${visible ? ' visible' : ''}`;
+    
+    return (
+        <div className={bgClass}>
+            {svg(backgroundID)}
+            {/* <img src={ backgroundURL } alt="bg1" /> */}
+        </div>
+    );
 }
 
-export default Nav;
+export default BG;
