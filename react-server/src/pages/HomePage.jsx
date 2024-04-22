@@ -1,10 +1,11 @@
 import React from "react";
 import Nav from "./components/Nav";
 import Background from "./components/Background";
+import MainBody from "./components/MainBody";
 
 function HomePage({ getCollegeDetails }) {
 
-  const { colors, navigation, logo, name } = getCollegeDetails();
+  const { colors, navigation, logo, name, title, subTitle, list, members} = getCollegeDetails();
 
   let root = document.documentElement;
   root.style.setProperty("--primary-color", colors[0]);
@@ -19,8 +20,7 @@ function HomePage({ getCollegeDetails }) {
     <div>
       <Nav navigation={navigation} logo={logo} name={name} />
       <Background backgroundID={1} />
-      <h1>Welcome to College Clubs!</h1>
-      <p>Explore and register for events hosted by various college clubs.</p>
+      <MainBody title={title} subTitle={subTitle} list={list} members={members} />
     </div>
   );
 }
