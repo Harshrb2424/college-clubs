@@ -38,7 +38,7 @@ const collegeDetails = {
             "Lorem ipsum dolor sit amet",
             "Consectetur adipiscing elit",
           ],
-          imgUrl: "reddy.jpg",
+          imgUrl: "https://mrec.ac.in/Images/founder.jpg",
         },
         {
           name: "Mahender Reddy",
@@ -46,7 +46,7 @@ const collegeDetails = {
             "Pellentesque habitant morbi tristique senectus",
             "Et netus et malesuada fames",
           ],
-          imgUrl: "mahender.jpg",
+          imgUrl: "https://mrec.ac.in/Images/About/messages/mahendhar_reddy.jpg",
         },
       ],
     },
@@ -59,7 +59,7 @@ const collegeDetails = {
             "Duis aute irure dolor in reprehenderit",
             "In voluptate velit esse cillum",
           ],
-          imgUrl: "pcLogo.jpg",
+          imgUrl: "https://pbs.twimg.com/profile_images/1678604376032813056/c-wEQr15_400x400.jpg",
         },
         {
           name: "Non Tech Events",
